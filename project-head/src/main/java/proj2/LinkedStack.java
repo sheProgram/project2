@@ -20,7 +20,7 @@ public final class LinkedStack<T> implements StackInterface<T>
 
 	private class Node
 	{
-      private T    data; // Entry in stack
+      private T data; // Entry in stack
       private Node next; // Link to next node
       
       private Node(T dataPortion)
