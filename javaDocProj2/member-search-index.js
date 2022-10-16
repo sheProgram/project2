@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"proj2","c":"StackInterface","l":"clear()"},{"p":"proj2","c":"StackInterface","l":"isEmpty()"},{"p":"proj2","c":"StackInterface","l":"peek()"},{"p":"proj2","c":"StackInterface","l":"pop()"},{"p":"proj2","c":"StackInterface","l":"push(T)"}];updateSearchResults();
