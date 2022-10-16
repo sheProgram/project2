@@ -11,11 +11,11 @@ Erika Ledesma, euledesma@cpp.edu, erikajledesma
 
     Roles & Contribution
 
-Mohraiel Matta: converttopostfix,unit test cases for calculator, tasks 2-3
+Mohraiel Matta: Use a LinkedStack class instance to implement the algorithm convertToPostfix (Tasks 2-3), Unit test cases for CalculatorTest
 
-Erika Ledesma: created javadoc, tasks 1&4, manual postfix and evaluation
+Erika Ledesma: Manual postfix and evaluation (Tasks 1 & 4), Created Javadoc files, Helped rest of group when issues arise
 
-Tiffany Truong: evaluate postfix (task 5-6), linkedstack test cases
+Tiffany Truong: Use a ResizeableArrayStack class instance to implement the algorithm evaluatePostfix (Tasks 5-6), Unit test cases for LinkedStackTest & ResizableArrayStackTest
 
 **Javadoc start page**: https://github.com/sheProgram/project2/blob/610a823452fdf2a15b1e86b9fe257e2a3ff785bb/javaDocProj2/index.html
 
