@@ -1,4 +1,4 @@
-# Project 2A
+# Project 2
     Group Name
 shePrograms
 
