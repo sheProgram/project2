@@ -58,11 +58,10 @@ public class Calculator {
                     case '-':
                     case '*':
                     case '/':
-                    while (!opstack.isEmpty()
-                    && (checkprec(nextChar) <= checkprec(opstack.peek()))) {
-                postfix += opstack.peek();
-                opstack.pop();
-            }
+                        while (!opstack.isEmpty() && (checkprec(nextChar) <= checkprec(opstack.peek()))) {
+                        postfix += opstack.peek();
+                        opstack.pop();
+                        }
                         opstack.push(nextChar);
                         break;
                     case '(':
@@ -78,7 +77,7 @@ public class Calculator {
                         break;
                 }
             }
-            if (!opstack.isEmpty()||opstack==null) {
+            while (!opstack.isEmpty() || opstack == null) {
                 char topOperator = opstack.pop();
                 postfix += topOperator;
             }
