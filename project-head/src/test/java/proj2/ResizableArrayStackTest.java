@@ -15,5 +15,17 @@ public class ResizableArrayStackTest {
             System.out.println("Stack is empty");
         }
     }
+
+    public void pop() {
+
+
+    }
+
+    public void peek() {
+
+    }
+
+
+
 }
 
