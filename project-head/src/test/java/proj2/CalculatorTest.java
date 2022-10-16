@@ -17,11 +17,19 @@ public class CalculatorTest {
         add=Calculator.convertToPostfix("a+b");
         assertEquals(add,"ab+");
     }
+
     @Test
     void division(){
         String div="";
         div=Calculator.convertToPostfix("a/b");
         assertEquals(div,"ab/"); 
+    }
+
+    @Test 
+    void multiplication() {
+        String mul = "";
+        mul=Calculator.convertToPostfix("a*b");
+        assertEquals(mul, "ab*");
     }
 
 }
