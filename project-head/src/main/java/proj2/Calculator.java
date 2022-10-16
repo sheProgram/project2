@@ -5,14 +5,89 @@ public class Calculator {
     public static void main(String[] args) {
         String infix = "a*b/(c-a)+d*e";
         String postfix = "[postfix] here";
-
-        System.out.println("Infix expression: " + infix + "\nPostfix expression: " + postfix);
-
+        System.out.println("Infix expression: " + infix + "\nPostfix expression: " + convertToPostfix(infix));
         // just for testing purposes to check if evaluatePostfix method works
         System.out.println("Result: " + evaluatePostfix(postfix));
     }
 
     // public static String convertToPostfix(String infix){
+        private static int checkprec(char operator) {
+            switch (operator) {
+                //switch statement best way to sort and convert as we tried in class
+                case '+':
+                case '-':
+                    return 1;
+                case '*':
+                case '/':
+                    return 2;
+                case '^':
+                    return 3;
+                case '(':
+                case ')':
+                    return 0;
+            }
+            return operator;
+        }
+
+        //a method in order to convert the given infex into postfix
+        public static String convertToPostfix(String infix) {
+            StackInterface<Character> opstack = new LinkedStack<Character>();
+            String postfix = "";
+            char nextChar = infix.charAt(0);
+            int end = infix.length() - 1;
+    
+
+
+            for (int spc = 0; spc <= end; spc++) {
+                nextChar = infix.charAt(spc);
+                switch (nextChar) {
+                    case 'a':
+                    case 'b':
+                    case 'c':
+                    case 'd':
+                    case 'e':
+                        postfix += nextChar;
+                        break;
+                    //checks for the signs then looks are their precedence
+                    case '^':
+                        opstack.push(nextChar);
+                        break;
+                    case '+':
+                    case '-':
+                    case '*':
+                    case '/':
+                    while (!opstack.isEmpty()
+                    && (checkprec(nextChar) <= checkprec(opstack.peek()))) {
+                postfix += opstack.peek();
+                opstack.pop();
+            }
+                        opstack.push(nextChar);
+                        break;
+                    case '(':
+                        opstack.push(nextChar);
+                        break;
+                    case ')':
+                    //in order to check the parenthesis 
+                        char top = opstack.pop();
+                        while (!opstack.isEmpty() && top != '(') {
+                            postfix += top;
+                            top = opstack.pop();
+                        }
+                        break;
+                }
+            }
+            if (!opstack.isEmpty()||opstack==null) {
+                char topOperator = opstack.pop();
+                postfix += topOperator;
+            }
+
+            return postfix;
+    
+        }
+
+
+
+
 
     // }
 
