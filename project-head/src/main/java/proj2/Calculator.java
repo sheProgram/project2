@@ -9,7 +9,7 @@ public class Calculator {
 
         // just for testing purposes to check if evaluatePostfix method works
         int result = evaluatePostfix(postfix);
-        System.out.println("Answer: " + result);
+        System.out.println("Assuming when a=2, b=3, c=4, d=5, e=6, the result is: " + result);
     }
 
     // public static String convertToPostfix(String infix){
@@ -126,9 +126,9 @@ public class Calculator {
                 result = calculate(nextCharacter, operandOne, operandTwo);
                 valueStack.push(result);
                 default: break; // ignore unexpected characters
-            }
+            } // end of switch
             ++index;
-        }
+        } // end of while 
         return valueStack.peek();
     } // end evaluatePostfix
 
