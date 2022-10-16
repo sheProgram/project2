@@ -1,9 +1,18 @@
 package proj2;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Stack;
+
 public class LinkedStackTest {
-    public static void main(String args[])
+    private Stack testStack;
+
+	@Test 
+    public void checkifNull ()
     {
-        System.out.println("Hello world");
+        testStack.push(null);
+        assertEquals(null, testStack.pop());
     }
+      
 }
