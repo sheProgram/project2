@@ -4,10 +4,12 @@ import java.lang.Math;
 public class Calculator {
     public static void main(String[] args) {
         String infix = "a*b/(c-a)+d*e";
-        String postfix = "[postfix] here";
-        System.out.println("Infix expression: " + infix + "\nPostfix expression: " + convertToPostfix(infix));
+        String postfix = convertToPostfix(infix);
+        System.out.println("Infix expression: " + infix + "\nPostfix expression: " + postfix);
+
         // just for testing purposes to check if evaluatePostfix method works
-        System.out.println("Result: " + evaluatePostfix(postfix));
+        int result = evaluatePostfix(postfix);
+        System.out.println("Answer: " + result);
     }
 
     // public static String convertToPostfix(String infix){
@@ -86,11 +88,7 @@ public class Calculator {
         }
 
 
-
-
-
     // }
-
 
     /** 
     * Evaluates a postfix expression, provided that all variables in the postfix expression are replaced by their respective values */
@@ -129,6 +127,7 @@ public class Calculator {
                 valueStack.push(result);
                 default: break; // ignore unexpected characters
             }
+            ++index;
         }
         return valueStack.peek();
     } // end evaluatePostfix
@@ -163,5 +162,4 @@ public class Calculator {
         } // end switch
         return result;
     } // end of calculate
-    
 }
