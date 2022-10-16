@@ -37,9 +37,6 @@ public class Calculator {
             String postfix = "";
             char nextChar = infix.charAt(0);
             int end = infix.length() - 1;
-    
-
-
             for (int spc = 0; spc <= end; spc++) {
                 nextChar = infix.charAt(spc);
                 switch (nextChar) {
@@ -83,10 +80,7 @@ public class Calculator {
             }
 
             return postfix;
-    
         }
-
-
     // }
 
     /** 
