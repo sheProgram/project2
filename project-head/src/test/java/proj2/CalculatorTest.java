@@ -32,4 +32,11 @@ public class CalculatorTest {
         assertEquals(mul, "ab*");
     }
 
+    @Test 
+    void exponential() {
+        String exp = "";
+        exp = Calculator.convertToPostfix("a^b");
+        assertEquals(exp, "ab^");
+    }
+
 }
