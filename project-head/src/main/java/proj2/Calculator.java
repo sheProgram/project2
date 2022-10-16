@@ -33,7 +33,7 @@ public class Calculator {
 
         //a method in order to convert the given infex into postfix
         public static String convertToPostfix(String infix) {
-            StackInterface<Character> opstack = new LinkedStack<Character>();
+            LinkedStack<Character> opstack = new LinkedStack<Character>();
             String postfix = "";
             char nextChar = infix.charAt(0);
             int end = infix.length() - 1;
