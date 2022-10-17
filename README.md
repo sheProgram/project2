@@ -13,7 +13,7 @@ Erika Ledesma, euledesma@cpp.edu, erikajledesma
 
 Mohraiel Matta: Use a LinkedStack class instance to implement the algorithm convertToPostfix (Tasks 2-3), Unit test cases for CalculatorTest
 
-Erika Ledesma: Manual postfix and evaluation (Tasks 1 & 4), Created Javadoc files, Helped rest of group when issues arise
+Erika Ledesma: Manual postfix expression and evaluation (Tasks 1 & 4), Created Javadoc, Helped implement LinkedStack class and troubleshoot code, Recorded video
 
 Tiffany Truong: Use a ResizeableArrayStack class instance to implement the algorithm evaluatePostfix (Tasks 5-6), Unit test cases for LinkedStackTest & ResizableArrayStackTest
 
