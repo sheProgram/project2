@@ -1,6 +1,11 @@
 package proj2;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+/**
+ * unit test cases for calculator, testing sortings and conversions in addition to evaluations
+ * 
+ * @author Mohraiel Matta
+ * 
+ */
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {

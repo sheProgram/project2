@@ -1,7 +1,12 @@
 package proj2;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+/**
+ * unit test cases for linkedstack
+ * 
+ * @author Tiffany Truong
+ * 
+ */
 public class LinkedStackTest {
     /** Test case values: push 5,4,3,2,1 and pop twice
  *   Expected output: value at the top is 3 */

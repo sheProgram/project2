@@ -1,5 +1,10 @@
 package proj2;
-
+/**
+ * convertToPostfix and evaluate postfix, in addition to side methods to check in our main methods which are to check the precedent and to calculate the sorted postfix
+ * 
+ * @author Mohraiel Matta, Tiffany Truong, Erika Ledesma
+ * 
+ */
 import java.lang.Math;
 public class Calculator {
     public static void main(String[] args) {
@@ -30,8 +35,11 @@ public class Calculator {
             return operator;
         }
 
-        //a method in order to convert the given infex into postfix
+        /**a method in order to convert the given infex into postfix
+         * @param infix An infix expression.
+         * @return postfix expression that has been converted */
         public static String convertToPostfix(String infix) {
+            //implements linkedstack
             LinkedStack<Character> opstack = new LinkedStack<Character>();
             String postfix = "";
             char nextChar = infix.charAt(0);
@@ -54,6 +62,7 @@ public class Calculator {
                     case '-':
                     case '*':
                     case '/':
+                    //while the stack is !empty and the precedent is checked, if it is less than or equal to the precedent, it will go to top value of stack and pop opstack to the postifx
                         while (!opstack.isEmpty() && (checkprec(nextChar) <= checkprec(opstack.peek()))) {
                         postfix += opstack.peek();
                         opstack.pop();
@@ -78,7 +87,7 @@ public class Calculator {
                 postfix += topOperator;
             }
 
-            return postfix;
+            return postfix;//postfix in result
         }
 
     /** 
