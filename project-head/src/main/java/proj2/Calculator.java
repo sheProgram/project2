@@ -7,7 +7,7 @@ public class Calculator {
         String postfix = convertToPostfix(infix);
         System.out.println("Infix expression: " + infix + "\nPostfix expression: " + postfix);
 
-        // just for testing purposes to check if evaluatePostfix method works
+        // after getting the postfix from covertToPostfix, print out result for evaluatePostfix -- result displays 33
         int result = evaluatePostfix(postfix);
         System.out.println("Assuming when a=2, b=3, c=4, d=5, e=6, the result is: " + result);
     }
