@@ -33,5 +33,16 @@ public class LinkedStackTest {
         st.pop();
         assertEquals(false, st.isEmpty());
     }
-
+    @Test
+    <T> void stackhasempty(){
+        LinkedStack<Integer> st = new LinkedStack<>();
+        st.push(0); 
+        st.push(5);
+        st.push(0);
+        st.push(1);
+        st.push(0);
+        st.pop();
+        st.pop();
+        assertEquals(0, st.pop());
+    }
 }

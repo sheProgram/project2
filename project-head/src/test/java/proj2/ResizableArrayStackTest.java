@@ -34,5 +34,18 @@ public class ResizableArrayStackTest {
         assertEquals(false, st.isEmpty());
     }
 
+    @Test
+    <T> void stackhasempty(){
+        ResizableArrayStack<Integer> st = new ResizableArrayStack<>();
+        st.push(0); 
+        st.push(5);
+        st.push(0);
+        st.push(1);
+        st.push(0);
+        st.pop();
+        st.pop();
+        assertEquals(0, st.pop());
+    }
+
 }
 

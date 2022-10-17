@@ -12,7 +12,6 @@ public class Calculator {
         System.out.println("Assuming when a=2, b=3, c=4, d=5, e=6, the result is: " + result);
     }
 
-    // public static String convertToPostfix(String infix){
         private static int checkprec(char operator) {
             switch (operator) {
                 //switch statement best way to sort and convert as we tried in class
@@ -81,7 +80,6 @@ public class Calculator {
 
             return postfix;
         }
-    // }
 
     /** 
     * Evaluates a postfix expression, provided that all variables in the postfix expression are replaced by their respective values */

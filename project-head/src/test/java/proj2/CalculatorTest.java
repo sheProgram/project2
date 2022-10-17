@@ -39,4 +39,11 @@ public class CalculatorTest {
         assertEquals(exp, "ab^");
     }
 
+    @Test
+    void emptycalc(){
+        String emp="";
+        emp=Calculator.convertToPostfix(" ");
+        assertEquals(emp, "");
+    }
+
 }
