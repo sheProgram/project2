@@ -20,6 +20,7 @@ public class Calculator {
         private static int checkprec(char operator) {
             switch (operator) {
                 //switch statement best way to sort and convert as we tried in class
+                //in order for precedence
                 case '+':
                 case '-':
                     return 1;
