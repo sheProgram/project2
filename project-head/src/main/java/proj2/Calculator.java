@@ -35,9 +35,9 @@ public class Calculator {
             LinkedStack<Character> opstack = new LinkedStack<Character>();
             String postfix = "";
             char nextChar = infix.charAt(0);
-            for (int spc = 0; spc <= infix.length() - 1; spc++) {
+            int end = infix.length() - 1;
+            for (int spc = 0; spc <= end; spc++) {
                 nextChar = infix.charAt(spc);
-                //checking characters first 
                 switch (nextChar) {
                     case 'a':
                     case 'b':
@@ -49,6 +49,7 @@ public class Calculator {
                     //checks for the signs then looks are their precedence
                     case '^':
                         opstack.push(nextChar);
+                        break;
                     case '+':
                     case '-':
                     case '*':
@@ -81,15 +82,18 @@ public class Calculator {
         }
 
     /** 
-    * Evaluates a postfix expression, provided that all variables in the postfix expression are replaced by their respective values */
+    * Evaluates a postfix expression, provided that all variables in the postfix expression are replaced by their respective values 
+    @param postfix A postfix expression.
+    @return An integer value obtained after evaluating the postfix expression. */
     public static int evaluatePostfix(String postfix) {
         // evaluates a postfix expression
-        ResizableArrayStack<Integer> valueStack = new ResizableArrayStack<>();
+        ResizableArrayStack<Integer> valueStack = new ResizableArrayStack<>(); // call a new empty stack 
 
         int index = 0;
         int result = 0;
-        while (index < postfix.length()) {
+        while (index < postfix.length()) { // while loop to check while posfix has characters left to parse
             Character nextCharacter = postfix.charAt(index);
+            // switch statement to take in variable and switch it with the value of the variable 
             switch (nextCharacter) {
                 case 'a': 
                     valueStack.push(2);
@@ -113,13 +117,13 @@ public class Calculator {
                 case '^':
                 int operandTwo = valueStack.pop();
                 int operandOne = valueStack.pop();
-                result = calculate(nextCharacter, operandOne, operandTwo);
-                valueStack.push(result);
+                result = calculate(nextCharacter, operandOne, operandTwo); // call the method calculate to calculate the result
+                valueStack.push(result); // push the result 
                 default: break; // ignore unexpected characters
             } // end of switch
             ++index;
         } // end of while 
-        return valueStack.peek();
+        return valueStack.peek(); // returns the final result 
     } // end evaluatePostfix
 
     // performs the mathematical operator on the two operands that were passed in as arguments
@@ -150,6 +154,6 @@ public class Calculator {
                 break;
             default : break;
         } // end switch
-        return result;
+        return result; // returns the end result 
     } // end of calculate
 }
