@@ -35,9 +35,9 @@ public class Calculator {
             LinkedStack<Character> opstack = new LinkedStack<Character>();
             String postfix = "";
             char nextChar = infix.charAt(0);
-            int end = infix.length() - 1;
-            for (int spc = 0; spc <= end; spc++) {
+            for (int spc = 0; spc <= infix.length() - 1; spc++) {
                 nextChar = infix.charAt(spc);
+                //checking characters first 
                 switch (nextChar) {
                     case 'a':
                     case 'b':
@@ -49,7 +49,6 @@ public class Calculator {
                     //checks for the signs then looks are their precedence
                     case '^':
                         opstack.push(nextChar);
-                        break;
                     case '+':
                     case '-':
                     case '*':
