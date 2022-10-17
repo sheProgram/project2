@@ -20,4 +20,4 @@ Tiffany Truong: Use a ResizeableArrayStack class instance to implement the algor
 **Javadoc start page**: https://github.com/sheProgram/project2A/blob/main/javaDocProj2/proj2/StackInterface.html
 
 
-**Link to Video**: 
+**Link to Video**: https://youtu.be/Ag0GvTxDyDI
